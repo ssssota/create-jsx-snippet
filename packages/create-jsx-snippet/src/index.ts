@@ -46,7 +46,7 @@ function renderChildren(children: JSXElement['props']['children']): string {
 	return renderJsxElement(children);
 }
 
-export function createJsxSnippet<Args extends any[]>(
+export function createJsxSnippet<Args extends unknown[]>(
 	fn: (...args: Parameters<Parameters<typeof createRawSnippet<Args>>[0]>) => {
 		render: () => JSXElement;
 		setup?: (node: Element) => void;

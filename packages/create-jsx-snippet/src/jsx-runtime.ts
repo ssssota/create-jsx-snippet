@@ -10,7 +10,7 @@ export const Fragment = { type: 'fragment', props: {} } as const;
 export type Fragment = typeof Fragment;
 const jsxDEV = <T extends keyof JsxIntrinsicElements | Fragment['type']>(
 	type?: T,
-	props: Record<any, unknown> = {},
+	props: Record<string, unknown> = {},
 	_key?: string | number | null | undefined,
 	_isStatic?: boolean,
 	_opts?: JsxDevOpts,
@@ -41,7 +41,9 @@ export type JSXElement = {
 export type JSXChildren = JSXElement | Fragment | string | number | boolean | null | undefined;
 
 declare global {
+	// eslint-disable-next-line @typescript-eslint/no-namespace
 	namespace JSX {
+		// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 		interface IntrinsicElements extends JsxIntrinsicElements {}
 		type Element = JSXElement;
 	}
