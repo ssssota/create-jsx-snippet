@@ -1,0 +1,36 @@
+{
+	"name": "create-jsx-snippet",
+	"version": "0.0.1",
+	"description": "`createRawSnippet` function wrapper for JSX",
+	"type": "module",
+	"main": "dist/index.js",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./jsx-runtime": {
+			"types": "./dist/jsx-runtime.d.ts",
+			"default": "./dist/jsx-runtime.js"
+		},
+		"./jsx-dev-runtime": {
+			"types": "./dist/jsx-runtime.d.ts",
+			"default": "./dist/jsx-runtime.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w"
+	},
+	"keywords": [
+		"svelte",
+		"snippet",
+		"jsx"
+	],
+	"author": "TOMIKAWA Sotaro <tommysouta@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"svelte": "^5.0.0-next.192",
+		"typescript": "^5.5.3"
+	}
+}
