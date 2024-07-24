@@ -4,6 +4,7 @@
 	"scripts": {
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
+		"build": "pnpm -r build",
 		"changeset": "changeset",
 		"bump": "pnpm changeset version && pnpm fmt",
 		"release": "pnpm build && pnpm changeset publish"
